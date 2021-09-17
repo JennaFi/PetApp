@@ -1,0 +1,31 @@
+import React from 'react'
+import { Image, View } from 'react-native'
+import pet from '../../assets/data/pet'
+import styles from './styles'
+
+// interface PetCardProps {
+//   petItem: {
+//     id: string,
+//     category: string,
+//     image: string,
+//     name: string,
+//     age: number,
+//     sex: string,
+//     description: string,
+//   }
+// }
+
+const PetCard = () => {
+  return (
+    <View style={styles.root}>
+      <Image
+        style={styles.image}
+        source={{
+          uri: pet.image,
+        }}
+      />
+    </View>
+  )
+}
+
+export default PetCard
