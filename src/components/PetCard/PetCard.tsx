@@ -1,6 +1,13 @@
-import React from 'react'
-import { Image, Text, TouchableOpacity, View } from 'react-native'
+import React, { useState } from 'react'
+import {
+  Image,
+  Text,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+  View,
+} from 'react-native'
 import AntDesign from 'react-native-vector-icons/AntDesign'
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import pet from '../../assets/data/pet'
 import styles from './styles'
@@ -18,6 +25,16 @@ import styles from './styles'
 // }
 
 const PetCard = () => {
+  const [isLiked, setIsLiked] = useState(false)
+  const [addToFav, setAddtoFav] = useState(false)
+
+  const onPressLiked = () => {
+    setIsLiked(!isLiked)
+  }
+  const onPressAdded = () => {
+    setAddtoFav(!addToFav)
+  }
+
   return (
     <View style={styles.root}>
       <View style={styles.row}>
@@ -26,8 +43,31 @@ const PetCard = () => {
           <Text style={styles.text}>{pet.name}</Text>
           <View style={styles.leftContainer}>
             <View style={styles.icon}>
-              <AntDesign name="heart" size={28} color="red" />
+              <TouchableWithoutFeedback onPress={onPressLiked}>
+                {isLiked ? (
+                  <AntDesign name="heart" size={28} color="red" />
+                ) : (
+                  <AntDesign name="hearto" size={28} color="red" />
+                )}
+              </TouchableWithoutFeedback>
             </View>
+            <TouchableWithoutFeedback onPress={onPressAdded}>
+              {addToFav ? (
+                <FontAwesome
+                  style={styles.icon}
+                  name="bookmark-o"
+                  size={28}
+                  color="grey"
+                />
+              ) : (
+                <FontAwesome
+                  style={styles.icon}
+                  name="bookmark"
+                  size={28}
+                  color="red"
+                />
+              )}
+            </TouchableWithoutFeedback>
 
             <Ionicons name="paper-plane-outline" size={28} color="grey" />
           </View>
