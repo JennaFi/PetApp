@@ -3,17 +3,18 @@ import { FlatList, View } from 'react-native'
 import categories from '../../assets/data/categories'
 import CategoryItem from '../../components/CategoryItem'
 
-const HomeScreen = () => {
+
+
+const CategoryListScreen = () => {
+  // const item = props
   return (
     <View>
-      {/* <PetCard /> */}
-
       <FlatList
-        data={categories.items}
-        renderItem={({ item }) => <CategoryItem category={item} />}
+        data={categories}
+        renderItem={({ item }) => <CategoryItem item={item} />}
       />
     </View>
   )
 }
 
-export default HomeScreen
+export default CategoryListScreen

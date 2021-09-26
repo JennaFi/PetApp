@@ -6,11 +6,6 @@ import styles from './styles'
 
 interface PetItemProps {
   item: {
-    category: {
-      title: string,
-    },
-    
-
     id: string,
     name: string,
     image: string,

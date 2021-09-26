@@ -2,6 +2,8 @@ import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
   
+  
+  
   root: {
     flexDirection: 'row',
     marginVertical: 2,
@@ -11,11 +13,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   image: {
-    height: 170,
-    width: 100,
-    resizeMode: 'contain',
-    borderRadius: 5,
-    margin: 5
+    flex: 2,
+    height: 150,
+    resizeMode: 'contain', 
   },
   rightContainer: {
     padding: 10,  
@@ -23,12 +23,18 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flexDirection: 'row'
   },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold'
+  name: {
+    fontSize: 18,
   },
-  
- 
+  iconContainer: {
+    flexDirection: 'row',
+     
+      
+  },
+  icon: {
+    padding: 5
+  }
+    
 })
   
   

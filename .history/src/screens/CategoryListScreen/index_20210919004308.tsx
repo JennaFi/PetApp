@@ -1,17 +1,24 @@
 import React from 'react'
 import { FlatList, View } from 'react-native'
 import categories from '../../assets/data/categories'
-import CategoryListItem from '../../components/CategoryListItem'
+import CategoryItem from '../../components/CategoryItem'
 
+// interface CategoryListProps {
+//   categories: {
+//     id: {};
+//     name: {};
+//     image: {};
+//   }
 
+// }
 
 const CategoryListScreen = () => {
   // const item = props
   return (
     <View>
       <FlatList
-        data={categories.items}
-        renderItem={({ item }) => <CategoryListItem category={item} />}
+        data={categories}
+        renderItem={({ category }) => <CategoryItem category={category} />}
       />
     </View>
   )

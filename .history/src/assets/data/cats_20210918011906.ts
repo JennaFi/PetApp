@@ -4,7 +4,7 @@ export default [
     name: 'Lila',
     sex: 'F',
     age: '2',
-    image: 'https://cdn.pixabay.com/photo/2016/07/10/21/47/cat-1508613_1280.jpg',
+    image: 'https://pixabay.com/images/id-323262/',
     description: 'lovely girl'
 
   },
@@ -13,7 +13,7 @@ export default [
     name: 'Tommy',
     sex: 'M',
     age: '3',
-    image: 'https://cdn.pixabay.com/photo/2013/05/30/18/21/cat-114782_1280.jpg',
+    image: 'https://images.app.goo.gl/9qE9MytBuhDNmmiW8',
     description: 'lovely boy'
   },
   {
@@ -21,7 +21,7 @@ export default [
     name: 'Tina',
     sex: 'F',
     age: '3',
-    image: 'https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_1280.jpg',
+    image: 'https://images.app.goo.gl/6TCF3sxuuwovXcAw9',
     description: 'lovely girl'
   },
 

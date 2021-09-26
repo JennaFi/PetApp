@@ -11,9 +11,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   image: {
-    height: 170,
-    width: 100,
-    resizeMode: 'contain',
+    height: 100,
+    width: '50%',
+    resizeMode: 'cover',
     borderRadius: 5,
     margin: 5
   },

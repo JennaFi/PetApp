@@ -13,16 +13,17 @@ export default [
   {
     id: '3',
     name: 'Rabbits',
-    image: 'https://cdn.pixabay.com/photo/2020/02/29/18/59/rabbit-4890861_1280.jpg',
+    image: 'https://www.clipartmax.com/middle/m2i8Z5Z5A0H7N4d3_clipart-of-rabbit-cute-rabbit-cartoon-black-and-white/',
   },
   {
     id: '4',
     name: 'Turtles',
-    image: 'https://cdn.pixabay.com/photo/2018/01/22/08/45/turtle-3098448_1280.jpg'
+    image: 'https://www.clipartmax.com/middle/m2K9A0m2A0K9K9d3_download-turtle-png-transparent-images-transparent-turtle-clipart-png/',
+
   },
   {
     id: '5',
     name: 'Birds',
-    image: 'https://cdn.pixabay.com/photo/2014/07/08/12/36/bird-386725_1280.jpg'
+    image: 'https://www.clipartmax.com/middle/m2K9A0d3H7G6m2d3_free-vector-bird-stand-tree-vine-silhouette-clip-art-bird-silhouette/'
   }
 ]

@@ -1,7 +1,7 @@
 import React from 'react'
 import { FlatList, View } from 'react-native'
-import categories from '../../assets/data/categories'
-import CategoryItem from '../../components/CategoryItem'
+import cats from '../../assets/data/cats'
+import PetItem from '../../components/PetItem'
 
 const HomeScreen = () => {
   return (
@@ -9,8 +9,8 @@ const HomeScreen = () => {
       {/* <PetCard /> */}
 
       <FlatList
-        data={categories.items}
-        renderItem={({ item }) => <CategoryItem category={item} />}
+        data={cats}
+        renderItem={({ item }) => <PetItem item={item} />}
       />
     </View>
   )
