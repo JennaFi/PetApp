@@ -15,9 +15,11 @@ const CategoryItem = (props: CategoryItemProps) => {
 
   return (
     <>
+      <Text style={styles.title}>{category.title}</Text>
       <View style={styles.root}>
+        
         <View style={styles.rightContainer}>
-          <Text style={styles.title}>{category.title}</Text>
+          
           <FlatList
             data={category.pets}
             renderItem={({ item }) => (

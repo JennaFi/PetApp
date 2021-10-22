@@ -32,9 +32,9 @@ const styles = StyleSheet.create({
     marginRight: 5
   },
   image: {
-    flex: 1,
+    // flex: 1,
     resizeMode: 'cover',
-    height: 600,
+    height: 500,
     borderRadius: 10,
     borderColor: '#d1d1d1',
     marginVertical: 20,
