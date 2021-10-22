@@ -7,11 +7,11 @@
  *
  * @format
  */
-
 import React from 'react'
-import { SafeAreaView, ScrollView, useColorScheme, View } from 'react-native'
+import { SafeAreaView, useColorScheme, View } from 'react-native'
+import 'react-native-gesture-handler'
 import { Colors } from 'react-native/Libraries/NewAppScreen'
-import CategoryListScreen from './src/screens/CategoryListScreen'
+import Navigation from './src/navigation'
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark'
@@ -22,17 +22,14 @@ const App = () => {
 
   return (
     <SafeAreaView style={backgroundStyle}>
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          {/* <HomeScreen /> */}
-          <CategoryListScreen />
-        </View>
-      </ScrollView>
+      <View
+        style={{
+          backgroundColor: isDarkMode ? Colors.black : Colors.white,
+        }}>
+        {/* <HomeScreen /> */}
+        {/* <CategoryListScreen/> */}
+        <Navigation />
+      </View>
     </SafeAreaView>
   )
 }
