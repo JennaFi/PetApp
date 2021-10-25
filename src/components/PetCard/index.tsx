@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import {
-  Image,
+  ImageBackground,
   Text,
   TouchableOpacity,
   TouchableWithoutFeedback,
-  View
+  View,
 } from 'react-native'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
@@ -27,9 +27,12 @@ import styles from './styles'
 const PetCard = () => {
   const [isLiked, setIsLiked] = useState(false)
   const [addToFav, setAddtoFav] = useState(false)
+  const [likesCount, setLikesCount] = useState(0)
 
   const onPressLiked = () => {
     setIsLiked(!isLiked)
+    const amount = isLiked ? -1 : 1
+    setLikesCount(likesCount + amount)
   }
   const onPressAdded = () => {
     setAddtoFav(!addToFav)
@@ -45,12 +48,14 @@ const PetCard = () => {
             <View style={styles.icon}>
               <TouchableWithoutFeedback onPress={onPressLiked}>
                 {isLiked ? (
-                  <AntDesign name="heart" size={28} color="red" />
+                  <AntDesign name="heart" size={28} color="#e31e69" />
                 ) : (
-                  <AntDesign name="hearto" size={28} color="red" />
+                  <AntDesign name="hearto" size={28} color="#e31e69" />
                 )}
               </TouchableWithoutFeedback>
             </View>
+            <Text style={styles.likes}>{likesCount}</Text>
+
             <TouchableWithoutFeedback onPress={onPressAdded}>
               {addToFav ? (
                 <FontAwesome
@@ -64,7 +69,7 @@ const PetCard = () => {
                   style={styles.icon}
                   name="bookmark"
                   size={28}
-                  color="red"
+                  color="#2b9e59"
                 />
               )}
             </TouchableWithoutFeedback>
@@ -73,13 +78,34 @@ const PetCard = () => {
           </View>
         </View>
       </View>
-      <TouchableOpacity>
-        <Image
-          style={styles.image}
-          source={{
-            uri: pet.image,
-          }}
-        />
+      <TouchableOpacity onPress={onPressLiked} activeOpacity={0.5}>
+        <View>
+          <ImageBackground
+            style={styles.image}
+            source={{
+              uri: pet.image,
+            }}
+          />
+
+          {/* {isLiked ? (
+            <AntDesign
+              style={{
+                position: 'absolute',
+                justifyContent: 'center',
+                alignItems: 'center',
+                opacity: 0.3,
+                top: 120,
+                left: 30,
+                // bottom: 200,
+                // width: 185,
+                height: 500,
+              }}
+              name="heart"
+              size={380}
+              color="#f27492"
+            />
+          ) : null} */}
+        </View>
       </TouchableOpacity>
 
       <Text numberOfLines={5}>{pet.description}</Text>

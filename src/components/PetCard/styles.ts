@@ -45,6 +45,19 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: 'bold',
     
-  }
+  },
+  container: {
+    flex: 1,
+    backgroundColor: 'tomato',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  likes: {
+    fontWeight: 'bold',
+    margin: 3,
+  },
+ 
+  
+
 })
 export default styles
