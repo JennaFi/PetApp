@@ -26,7 +26,7 @@ export default [
   {
     user: {
       id: '2',
-      image:
+      imageUri:
         'https://lh3.googleusercontent.com/jsdwCx-wjTjeVE1KTNsG34z5YHIShgwrmkiw7dcytONsqQYDUZS7QpBN1Ds6CCd9EiUmW5NaGUVRr8O_btkhz04a',
       name: 'Puppy',
     },
@@ -45,7 +45,7 @@ export default [
   {
     user: {
       id: '3',
-      image:
+      imageUri:
         'https://lh3.googleusercontent.com/IAoSjrhWmWSGE5y83DhI7q8zCEMjRS-_D0EabeB2_5pe9M3oPLQSTupEmsz1Dm3SSsiFty2f0QLW3D4t4xxcvJ3O',
       name: 'Bunny',
     },
@@ -63,7 +63,7 @@ export default [
   {
     user: {
       id: '4',
-      image:
+      imageUri:
         'https://lh3.googleusercontent.com/ftE-OVODc2Q1D-6_iciqT0iOPuYBEQfuO09EIzCZbfVnXt4XWNeu-6XW57oGPm_olxvm57yiHx6d5lnTLfGrhI2tcvE',
       name: 'La Playa',
     },
@@ -83,7 +83,7 @@ export default [
   {
     user: {
       id: '5',
-      image:
+      imageUri:
         'https://lh3.googleusercontent.com/H66wVS8DHkHzmQDe9gNiMVJVH3BIKOcPzceiOLB-AKhanm2mLthChfPrhkwCIJ7x0M0DJQhVia2nKqS2Qvb1IbzvUA',
       name: 'Poppy',
     },
